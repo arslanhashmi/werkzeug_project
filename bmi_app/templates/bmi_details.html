@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}Details about /{{ bmi_id }}{% endblock %}
+{% block body %}
+<h2><a href="/show/{{ bmi_id }}">/{{ bmi_id }}</a></h2>
+<dl>
+    <dt>Your BMI:
+    <dd class=link>
+        <div>{{ bmi }}</div>
+</dl>
+{% endblock %}

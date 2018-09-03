@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Find BMI{% endblock %}
+{% block body %}
+<h2>Find out your BMI</h2>
+<form action="" method=post>
+    {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+    <p>
+        <input placeholder="Weight (Kg)" type="text" name="weight" value="{{ weight }}" class=urlinput/><br><br>
+        <input placeholder="Height (In)" type="text" name="height" value="{{ height }}" class=urlinput/><br><br>
+        <input type=submit value="Calculate BMI">
+    </p>
+</form>
+{% endblock %}
