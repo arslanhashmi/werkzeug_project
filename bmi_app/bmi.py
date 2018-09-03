@@ -52,10 +52,9 @@ class BMIApp(object):
         bmi = self.redis.get(f'bmi:{bmi_id}')
         if bmi is None:
             raise NotFound()
-        click_count = int(self.redis.get('click-count:' + bmi_id) or 0)
         return self.render_template(
             'bmi_details.html', bmi=bmi.decode(),
-            bmi_id=bmi_id, click_count=click_count
+            bmi_id=bmi_id
         )
 
     def error_404(self):
